@@ -162,17 +162,28 @@
               giscusScript.setAttribute('data-lang', 'en');
               giscusScript.setAttribute('crossorigin', 'anonymous');
               giscusScript.async = true;
-              document.getElementById('comments').appendChild(giscusScript);
-            } else if (commentType === 'discuss') {
-              var discussScript = document.createElement('script');
-              discussScript.src = 'https://brajesh-kumar-1.disqus.com/embed.js'; 
-              discussScript.setAttribute('data-timestamp', +new Date());
-              discussScript.async = true;
-              document.getElementById('comments').appendChild(discussScript);
-            }
-          });
-        });
-      </script>
+        document.getElementById('comments').appendChild(giscusScript);
+        } else if (commentType === 'discuss') {
+          var discussDiv = document.createElement('div');
+          discussDiv.id = 'disqus_thread';
+          document.getElementById('comments').appendChild(discussDiv);
+
+          // Disqus configuration
+          var disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = 'yash_yadav_birthday';
+          };
+
+          // Disqus embed script
+          var disqusScript = document.createElement('script');
+          disqusScript.src = 'https://brajesh-kumar-1.disqus.com/embed.js';
+          disqusScript.setAttribute('data-timestamp', +new Date());
+          disqusScript.async = true;
+          document.getElementById('comments').appendChild(disqusScript);
+        }
+      });
+    });
+  </script>
       <script id="dsq-count-scr" src="//brajesh-kumar-1.disqus.com/count.js" async></script>
 </body>
 </html>
