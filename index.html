@@ -49,16 +49,21 @@
       fill: white;
     }
 
-    /* Additional styles for the gallery */
+     /* Additional styles for the gallery */
+     /* Adjust pagination dots position */
+    .swiper-pagination {
+      position: relative;
+      bottom: 10px; /* Adjust as needed */
+    }
+     /* Ensure photos fit within the screen width */
     .swiper-container {
-      width: 100%;
-      height: 100%;
+     width: 100%;
+     height: auto; /* Allow height to adjust based on content */
     }
-    .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+     /* Adjust text font size for better readability */
+   .swiper-slide p {
+     font-size: 16px; /* Adjust as needed */
+   }
   </style>
 </head>
 <body>
