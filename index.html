@@ -122,65 +122,58 @@
       </div>
     </section>
     
-    <section id="comment">
-      <h2>wishes to My Lovely  Friend Yash</h2>
-      <div class="comment-options">
+    <section id="comments">
+      <h2>Comments Section</h2>
+      <div id="giscus_thread" style="display:none;"></div>
+      <div id="disqus_thread"></div>
+      <form id="commentTypeForm">
         <label for="giscus">Giscus:</label>
         <input type="radio" id="giscus" name="commentType" value="giscus">
-        <label for="discus">Discus:</label>
-        <input type="radio" id="discuss" name="commentType" value="discuss" checked>
-      </div>
-      <div id="comments">
-        <!-- Comment section will be loaded dynamically based on the user's selection -->
-      </div>
+        <label for="disqus">Disqus:</label>
+        <input type="radio" id="disqus" name="commentType" value="disqus" checked>
+      </form>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2024 Yash Yadav. All rights reserved.</p>
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
   </footer>
-  <!-- Disqus script -->
-  <script>
-    document.querySelectorAll('input[name="commentType"]').forEach(function(input) {
-      input.addEventListener('change', function() {
-        var commentType = this.value;
-        var commentsContainer = document.getElementById('comments');
-        commentsContainer.innerHTML = '';
-        
-        if (commentType === 'giscus') {
-          var giscusScript = document.createElement('script');
-          giscusScript.src = 'https://giscus.app/client.js';
-          giscusScript.setAttribute('data-repo', 'qwerty-me/qwerty-me.github.io');
-          giscusScript.setAttribute('data-repo-id', 'R_kgDOLjMOUg');
-          giscusScript.setAttribute('data-category', 'Comments');
-          giscusScript.setAttribute('data-category-id', 'DIC_kwDOLjMOUs4CeHPE');
-          giscusScript.setAttribute('data-mapping', 'title');
-          giscusScript.setAttribute('data-strict', '0');
-          giscusScript.setAttribute('data-reactions-enabled', '1');
-          giscusScript.setAttribute('data-emit-metadata', '0');
-          giscusScript.setAttribute('data-input-position', 'bottom');
-          giscusScript.setAttribute('data-theme', 'preferred_color_scheme');
-          giscusScript.setAttribute('data-lang', 'en');
-          giscusScript.setAttribute('crossorigin', 'anonymous');
-          giscusScript.async = true;
-          document.getElementById('comments').appendChild(giscusScript);
-        } else if (commentType === 'discuss') {
-          // Disqus configuration
-          var disqus_config = function () {
-            this.page.url = window.location.href;
-            this.page.identifier = 'yash_yadav_birthday';
-          };
 
-          // Disqus embed script with defer attribute for faster loading
-          var disqusScript = document.createElement('script');
-          disqusScript.src = 'https://brajesh-kumar-1.disqus.com/embed.js';
-          disqusScript.setAttribute('data-timestamp', +new Date());
-          disqusScript.defer = true;
-          document.getElementById('comments').appendChild(disqusScript);
-        }
-      });
-    });
+  <!-- Giscus Script -->
+  <script src="https://giscus.app/client.js"
+        data-repo="Qwerty-me/qwerty-me.github.io"
+        data-repo-id="R_kgDOLjMOUg"
+        data-category="Comments"
+        data-category-id="DIC_kwDOLjMOUs4CeHPE"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
   </script>
-  <script id="dsq-count-scr" src="//brajesh-kumar-1.disqus.com/count.js" async></script>
 
+  <!-- Disqus Script -->
+  <script>
+    /**
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://brajesh-kumar-1.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
 </body>
 </html>
