@@ -138,52 +138,47 @@
   <footer>
     <p>&copy; 2024 Yash Yadav. All rights reserved.</p>
   </footer>
-  
-      <script>
-        document.querySelectorAll('input[name="commentType"]').forEach(function(input) {
-          input.addEventListener('change', function() {
-            var commentType = this.value;
-            var commentsContainer = document.getElementById('comments');
-            commentsContainer.innerHTML = '';
-            
-            if (commentType === 'giscus') {
-              var giscusScript = document.createElement('script');
-              giscusScript.src = 'https://giscus.app/client.js';
-              giscusScript.setAttribute('data-repo', 'qwerty-me/qwerty-me.github.io');
-              giscusScript.setAttribute('data-repo-id', 'R_kgDOLjMOUg');
-              giscusScript.setAttribute('data-category', 'Comments');
-              giscusScript.setAttribute('data-category-id', 'DIC_kwDOLjMOUs4CeHPE');
-              giscusScript.setAttribute('data-mapping', 'title');
-              giscusScript.setAttribute('data-strict', '0');
-              giscusScript.setAttribute('data-reactions-enabled', '1');
-              giscusScript.setAttribute('data-emit-metadata', '0');
-              giscusScript.setAttribute('data-input-position', 'bottom');
-              giscusScript.setAttribute('data-theme', 'preferred_color_scheme');
-              giscusScript.setAttribute('data-lang', 'en');
-              giscusScript.setAttribute('crossorigin', 'anonymous');
-              giscusScript.async = true;
-        document.getElementById('comments').appendChild(giscusScript);
+  <!-- Disqus script -->
+  <script>
+    document.querySelectorAll('input[name="commentType"]').forEach(function(input) {
+      input.addEventListener('change', function() {
+        var commentType = this.value;
+        var commentsContainer = document.getElementById('comments');
+        commentsContainer.innerHTML = '';
+        
+        if (commentType === 'giscus') {
+          var giscusScript = document.createElement('script');
+          giscusScript.src = 'https://giscus.app/client.js';
+          giscusScript.setAttribute('data-repo', 'qwerty-me/qwerty-me.github.io');
+          giscusScript.setAttribute('data-repo-id', 'R_kgDOLjMOUg');
+          giscusScript.setAttribute('data-category', 'Comments');
+          giscusScript.setAttribute('data-category-id', 'DIC_kwDOLjMOUs4CeHPE');
+          giscusScript.setAttribute('data-mapping', 'title');
+          giscusScript.setAttribute('data-strict', '0');
+          giscusScript.setAttribute('data-reactions-enabled', '1');
+          giscusScript.setAttribute('data-emit-metadata', '0');
+          giscusScript.setAttribute('data-input-position', 'bottom');
+          giscusScript.setAttribute('data-theme', 'preferred_color_scheme');
+          giscusScript.setAttribute('data-lang', 'en');
+          giscusScript.setAttribute('crossorigin', 'anonymous');
+          giscusScript.async = true;
+          document.getElementById('comments').appendChild(giscusScript);
         } else if (commentType === 'discuss') {
-          var discussDiv = document.createElement('div');
-          discussDiv.id = 'disqus_thread';
-          document.getElementById('comments').appendChild(discussDiv);
-
           // Disqus configuration
           var disqus_config = function () {
             this.page.url = window.location.href;
             this.page.identifier = 'yash_yadav_birthday';
           };
 
-          // Disqus embed script
+          // Disqus embed script with defer attribute for faster loading
           var disqusScript = document.createElement('script');
           disqusScript.src = 'https://brajesh-kumar-1.disqus.com/embed.js';
           disqusScript.setAttribute('data-timestamp', +new Date());
-          disqusScript.async = true;
+          disqusScript.defer = true;
           document.getElementById('comments').appendChild(disqusScript);
         }
       });
     });
   </script>
-      <script id="dsq-count-scr" src="//brajesh-kumar-1.disqus.com/count.js" async></script>
 </body>
 </html>
