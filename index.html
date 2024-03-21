@@ -5,13 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lovely Yash Yadav</title>
   <style>
-    /* Your CSS styles here */
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #2196F3;
+      padding: 10px;
+      display: none;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+    #navButton {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      fill: white;
+    }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 10px;
     }
-
     .gallery img {
       max-width: 100%;
       height: auto;
