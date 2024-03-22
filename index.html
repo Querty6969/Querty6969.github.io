@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lovely Yash Yadav</title>
     <link rel="icon" href="assets/img/favicon.jpg">
     <style>
@@ -10,6 +10,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
         }
         header {
             position: relative;
@@ -46,22 +56,19 @@
             padding: 5px;
             fill: white;
         }
-        .gallery img {
-           width: 100%;
-           height: auto;
-        }
     </style>
 </head>
 <body>
 <header>
-    <img src="https://source.unsplash.com/featured/?birthday" alt="Birthday Image"
-         style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+    <img src="https://source.unsplash.com/featured/?birthday" alt="Birthday Image" style="width: 100%; height: auto;">
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff;">
         <h1 style="font-size: 2.5em; color:white">Happy_Birthday Yash_Yadav</h1>
     </div>
 </header>
 <button id="navButton">
-    <!-- Your navigation button icon here -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="white" d="M3 5v2h18V5H3zm0 7h18v-2H3v2zm0 6h18v-2H3v2z"/>
+    </svg>
 </button>
 <nav>
     <ul>
@@ -103,19 +110,20 @@
 
     <section id="gallery">
         <h2>Photo Gallery</h2>
-        
-        <img loading="lazy" src="assets/img/yash1.jpg" alt="Image 1">
-        <img loading="lazy" src="assets/img/yash2.jpg" alt="Image 2">
-        <img loading="lazy" src="assets/img/yash3.jpg" alt="Image 3">
-        <img loading="lazy" src="assets/img/yash4.jpg" alt="Image 4">
-        <img loading="lazy" src="assets/img/yash5.jpg" alt="Image 5">
-        <img loading="lazy" src="assets/img/yash6.jpg" alt="Image 6">
-        <img loading="lazy" src="assets/img/yash7.jpg" alt="Image 7">
-        <img loading="lazy" src="assets/img/yash8.jpg" alt="Image 8">
-        <img loading="lazy" src="assets/img/yash9.jpg" alt="Image 9">
-        <img loading="lazy" src="assets/img/yash10.jpg" alt="Image 10">
-        <img loading="lazy" src="assets/img/yash11.jpg" alt="Image 11">
-        <img loading="lazy" src="assets/img/yash12.jpg" alt="Image 12">
+        <div class="gallery">
+            <img loading="lazy"src="assets/img/yash1.jpg" alt="Image 1">
+            <img loading="lazy" src="assets/img/yash2.jpg" alt="Image 2">
+            <img loading="lazy" src="assets/img/yash3.jpg" alt="Image 3">
+            <img loading="lazy" src="assets/img/yash4.jpg" alt="Image 4">
+            <img loading="lazy" src="assets/img/yash5.jpg" alt="Image 5">
+            <img loading="lazy" src="assets/img/yash6.jpg" alt="Image 6">
+            <img loading="lazy" src="assets/img/yash7.jpg" alt="Image 7">
+            <img loading="lazy" src="assets/img/yash8.jpg" alt="Image 8">
+            <img loading="lazy" src="assets/img/yash9.jpg" alt="Image 9">
+            <img loading="lazy" src="assets/img/yash10.jpg" alt="Image 10">
+            <img loading="lazy" src="assets/img/yash11.jpg" alt="Image 11">
+            <img loading="lazy" src="assets/img/yash12.jpg" alt="Image 12">
+        </div>
     </section>
 
     <section id="comments">
