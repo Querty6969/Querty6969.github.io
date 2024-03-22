@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Lovely Yash Yadav</title>
     <link rel="icon" href="assets/img/favicon.jpg">
-    <!-- Link Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -48,21 +46,14 @@
             padding: 5px;
             fill: white;
         }
-
-        /* Additional styles for the gallery */
-        /* Adjust pagination dots position */
-        .swiper-pagination {
-            position: relative;
-            bottom: 10px; /* Adjust as needed */
+        .gallery {
+           display: grid;
+           grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+           gap: 10px;
         }
-        /* Ensure photos fit within the screen width */
-        .swiper-container {
-            width: 100%;
-            height: auto; /* Allow height to adjust based on content */
-        }
-        /* Adjust text font size for better readability */
-        .swiper-slide p {
-            font-size: 16px; /* Adjust as needed */
+        .gallery img {
+           max-width: 100%;
+           height: auto;
         }
     </style>
 </head>
@@ -117,25 +108,19 @@
 
     <section id="gallery">
         <h2>Photo Gallery</h2>
-        <!-- Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img loading="lazy" src="assets/img/yash1.jpg" alt="Image 1"></div>
-                <div class="swiper-slide"><img loading="lazy" src="assets/img/yash2.jpg" alt="Image 2"></div>
-                <div class="swiper-slide"><img loading="lazy" src="assets/img/yash3.jpg" alt="Image 3"></div>
-                <div class="swiper-slide"><img loading="lazy" src="assets/img/yash4.jpg" alt="Image 4"></div>
-                <div class="swiper-slide"><img loading="lazy" src="assets/img/yash5.jpg" alt="Image 5"></div>
-                <div class="swiper-slide"><img loading="lazy" src="assets/img/yash6.jpg" alt="Image 6"></div>
-                <div class="swiper-slide"><img loading="lazy" src="assets/img/yash7.jpg" alt="Image 7"></div>
-                <div class="swiper-slide"><img loading="lazy" src="assets/img/yash8.jpg" alt="Image 8"></div>
-                <div class="swiper-slide"><img loading="lazy" src="assets/img/yash9.jpg" alt="Image 9"></div>
-                <div class="swiper-slide"><img loading="lazy" src="assets/img/yash10.jpg" alt="Image 10"></div>
-                <div class="swiper-slide"><img loading="lazy" src="assets/img/yash11.jpg" alt="Image 11"></div>
-                <div class="swiper-slide"><img loading="lazy" src="assets/img/yash12.jpg" alt="Image 12"></div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
+        
+        <img loading="lazy" src="assets/img/yash1.jpg" alt="Image 1">
+        <img loading="lazy" src="assets/img/yash2.jpg" alt="Image 2">
+        <img loading="lazy" src="assets/img/yash3.jpg" alt="Image 3">
+        <img loading="lazy" src="assets/img/yash4.jpg" alt="Image 4">
+        <img loading="lazy" src="assets/img/yash5.jpg" alt="Image 5">
+        <img loading="lazy" src="assets/img/yash6.jpg" alt="Image 6">
+        <img loading="lazy" src="assets/img/yash7.jpg" alt="Image 7">
+        <img loading="lazy" src="assets/img/yash8.jpg" alt="Image 8">
+        <img loading="lazy" src="assets/img/yash9.jpg" alt="Image 9">
+        <img loading="lazy" src="assets/img/yash10.jpg" alt="Image 10">
+        <img loading="lazy" src="assets/img/yash11.jpg" alt="Image 11">
+        <img loading="lazy" src="assets/img/yash12.jpg" alt="Image 12">
     </section>
 
     <section id="comments">
@@ -158,16 +143,5 @@
     })();
 </script>
 
-<!-- Link Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: {
-            el: '.swiper-pagination',
-        },
-    });
-</script>
 </body>
 </html>
